@@ -1,301 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- Jquery CDN here -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- JS Link -->
-    <script src="js/app.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <title>Friend Finder Survey</title>
-</head>
+  </head>
 
-<body class="text-center">
-    <div class="container-fluid">
-        <main role="main" class="inner cover">
-            <h1 class="cover-heading">Friend Finder Survey</h1>
-            <p class="lead">Answer the following question and we will find your match!</p>
+  <body class="text-center">
+    <div class="container">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Friend Finder Survey</h1>
+        <p class="lead">
+          Answer the following question and we will find your match!
+        </p>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 1</h3>
-                    <p>Question data</p>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 1
+            </h3>
+            <p>You like traveling</p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel1">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel1">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 2</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 2
+            </h3>
+            <p>You enjoy more romantic scenery rather than a club</p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel2">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel2">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 3</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 3
+            </h3>
+            <p>You are more attracted more to personality than looks</p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel3">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel3">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 4</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 4
+            </h3>
+            <p>You enjoy trying new foods that are out of your comfort zone</p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel4">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel4">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 5</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 5
+            </h3>
+            <p>You are afraid of spiders</p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel5">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel5">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 6</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 6
+            </h3>
+            <p>You like Spongebob Squarepants</p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel6">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel6">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 7</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 7
+            </h3>
+            <p>You consider yourself to be an outdoors person</p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel7">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel7">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 8</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 8
+            </h3>
+            <p>
+              Your type of weekend involves resting at home with a good book or
+              simply relaxing
+            </p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel8">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel8">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 9</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 9
+            </h3>
+            <p>You have no problem sharing some food from your plate</p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel9">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel9">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-header">
-                        <span class="fa fa-question-circle"></span>Question 10</h3>
-                    <p>Question data</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-header">
+              <span class="fa fa-question-circle"></span>Question 10
+            </h3>
+            <p>
+              You have no problem being alone at home without the company of
+              other's
+            </p>
+          </div>
+          <div class="card-block two-col">
+            <div class="row">
+              <div class="col-md">
+                <div class="well well-sm">
+                  <div class="form-group">
+                    <label id="q1">Answer:</label>
+                    <select class="text-center form-control" id="sel10">
+                      <option value="0"></option>
+                      <option value="1">1 (Completely disagree)</option>
+                      <option value="2">2 (Disagree)</option>
+                      <option value="3">3 (Neutral)</option>
+                      <option value="4">4 (Agree)</option>
+                      <option value="5">5 (Completely agree)</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="card-block two-col">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="well well-sm">
-                                <div class="form-group">
-                                    <label id="q1">Answer:</label>
-                                    <select class="text-center form-control" id="sel10">
-                                        <option value="0"></option>
-                                        <option value="1">1 (Completely disagree)</option>
-                                        <option value="2">2 (Disagree)</option>
-                                        <option value="3">3 (Neutral)</option>
-                                        <option value="4">4 (Agree)</option>
-                                        <option value="5">5 (Completely agree)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+        </div>
 
-
-            <br>
-            <button type="button" class="btn-primary" id="submit">Submit</button>
-
-
-
-
-
-
-
-        </main>
+        <br />
+        <button type="button" class="btn-primary" id="submit">Submit</button>
+      </main>
     </div>
+    <script type="text/javascript">
+      $("#submit").on("click", function(event) {
+        console.clear();
+        event.preventDefault();
+        var filled = true;
+        filledOut();
 
-</body>
+        // Insert if !filled logic
+        if (filled) {
+          var user = {
+            score: [
+              $("#sel1").val(),
+              $("#sel2").val(),
+              $("#sel3").val(),
+              $("#sel4").val(),
+              $("#sel5").val(),
+              $("#sel6").val(),
+              $("#sel7").val(),
+              $("#sel8").val(),
+              $("#sel9").val(),
+              $("#sel10").val()
+            ]
+          };
+          console.log(user);
+        } else {
+          //Alerts user that there are fields missing
+          alert(
+            "You have not submitted all fields, please verify your answers!"
+          );
+        }
 
+        //Checks to see if the user has filled out all forms
+        function filledOut() {
+          $(".form-control").each(function() {
+            if ($(this).val() === "0") {
+              filled = false;
+            }
+          });
+          return filled;
+        }
+      });
+    </script>
+  </body>
 </html>
