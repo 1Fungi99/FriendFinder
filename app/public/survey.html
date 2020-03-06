@@ -25,7 +25,7 @@
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Friend Finder Survey</h1>
         <p class="lead">
-          Answer the following question and we will find your match!
+          Answer the following questions and we will find your match!
         </p>
 
         <div class="card">
@@ -318,8 +318,8 @@
 
         // Insert if !filled logic
         if (filled) {
-          var user = {
-            score: [
+          var userData = {
+            scores: [
               $("#sel1").val(),
               $("#sel2").val(),
               $("#sel3").val(),
@@ -332,7 +332,11 @@
               $("#sel10").val()
             ]
           };
-          console.log(user);
+          console.log(userData);
+
+          $.post("/api/friends", userData, function(data) {
+            alert("Your form has been submitted! Processing...");
+          });
         } else {
           //Alerts user that there are fields missing
           alert(
