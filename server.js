@@ -44,13 +44,12 @@ app.post("/api/friends", function(req, res) {
   friendArray.push(userData);
 
   //Global variable
-  var compatibilityGoal = 0;
-  var compatibilityArray = [];
+  var goal = 0;
+  var compArray = [];
 
   // Sum of all values in an array
   const arrSum = arr => arr.reduce((a, b) => a + b, 0);
 
-  // This function will check the new users compatibility based on question results
   function userCompatibility() {
     for (var i = 0; i < friendArray.length - 1; i++) {
       arrIndex = i;
@@ -60,18 +59,15 @@ app.post("/api/friends", function(req, res) {
       );
       differences(arrIndex);
     }
-    // This block of code checks the total difference array for the person who has the closest diff to zero
-    closest = compatibilityArray.reduce(function(prev, curr) {
-      return Math.abs(curr - compatibilityGoal) <
-        Math.abs(prev - compatibilityGoal)
-        ? curr
-        : prev;
+
+    closest = compArray.reduce(function(prev, curr) {
+      return Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev;
     });
 
     console.log("The most compatible score is: " + closest);
     mostCompatible();
   }
-  // Helper function that checks differences between user score and scores inside data array
+
   function differences(index) {
     let diffAnswer = [];
     for (var i = 0; i < userData.scores.length; i++) {
@@ -80,29 +76,25 @@ app.post("/api/friends", function(req, res) {
       );
       diffAnswer.push(diffBoth);
     }
-    totalDifference = arrSum(diffAnswer);
+    fDifference = arrSum(diffAnswer);
     console.log(
       "Total Difference between " +
         userData.name +
         " & " +
         friendArray[arrIndex].name +
         " is: " +
-        totalDifference
+        fDifference
     );
-    compatibilityArray.push(totalDifference);
+    compArray.push(fDifference);
   }
-  // Function to find the most compatible user
+
   function mostCompatible() {
-    for (var i = 0; i < compatibilityArray.length; i++) {
-      if (closest === compatibilityArray[i]) {
-        // Here the results were logged to get them on node terminal
-        console.log("The most compatible score has an index of: " + i);
+    for (var i = 0; i < compArray.length; i++) {
+      if (closest === compArray[i]) {
+        console.log("Best compatability index: " + i);
         console.log("The most compatible is: " + friendArray[i].name);
-        console.log(
-          "The most compatible has a picture of: " + friendArray[i].photo
-        );
+        console.log("src for best compatible: " + friendArray[i].photo);
         console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        // Here the result is placed in a variable that is then sent back the client
         var matched = friendArray[i];
         console.log(matched);
         return res.send(matched);
